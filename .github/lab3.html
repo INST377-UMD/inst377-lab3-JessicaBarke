@@ -1,0 +1,78 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>INST377 - RPS Page</title>
+  <link rel="stylesheet" href="INS" />
+</head>
+
+<body>
+  <!-- Header (same class as footer) -->
+  <header class="bar">
+    <h1>Rock • Paper • Scissors</h1>
+  </header>
+
+  <!-- Nav: 3 items, horizontal, no bullets, hover + real links -->
+  <nav id="main-nav">
+    <ul>
+      <li><a href="https://www.umd.edu" target="_blank" rel="noopener">UMD</a></li>
+      <li><a href="https://www.wikipedia.org" target="_blank" rel="noopener">Wiki</a></li>
+      <li><a href="https://www.google.com" target="_blank" rel="noopener">Google</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main row -->
+  <div class="main-container">
+    <!-- Main Content (percentage width, margin + padding) -->
+    <main class="content-area">
+      <h2>Play Now</h2>
+      <p>Enter your name, pick your move, and submit!</p>
+
+      <!-- FORM lives in MAIN; required name; select R/P/S; focus-grow textbox -->
+      <form class="rps-form" action="#" method="get">
+        <div class="form-row">
+          <label for="playerName">Name:</label>
+          <input type="text" id="playerName" name="playerName" required />
+        </div>
+
+        <div class="form-row">
+          <label for="move">Choose:</label>
+          <select id="move" name="move">
+            <option>Rock</option>
+            <option>Paper</option>
+            <option>Scissors</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- Sample content boxes -->
+      <section class="content-box">
+        <h3>Tips</h3>
+        <p>Humans tend to repeat patterns—mix it up to keep it fair.</p>
+      </section>
+      <section class="content-box">
+        <h3>Strategy</h3>
+        <p>Paper beats Rock, Rock beats Scissors, Scissors beat Paper.</p>
+      </section>
+    </main>
+
+    <!-- Sidebar (percentage width, different color, margin + padding, hover bg change) -->
+    <aside id="sidebar">
+      <h2>How to Play</h2>
+      <ol>
+        <li>Both players choose Rock, Paper, or Scissors.</li>
+        <li>Rock crushes Scissors.</li>
+        <li>Scissors cut Paper.</li>
+        <li>Paper covers Rock.</li>
+        <li>Same choice = tie; play again.</li>
+      </ol>
+    </aside>
+  </div>
+
+  <!-- Footer (same class as header) -->
+  <footer class="bar">
+    <p>© 2025 — RPS Demo</p>
+  </footer>
+</body>
+</html>

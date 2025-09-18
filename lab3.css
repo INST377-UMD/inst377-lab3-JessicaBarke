@@ -1,0 +1,132 @@
+/* Body uses custom font + page bg */
+body {
+  background-color: rgb(143, 206, 255);
+  font-family: "Trebuchet MS", Verdana, sans-serif; /* custom font */
+  margin: 0;
+}
+
+/* Shared header + footer styling via SAME CLASS */
+.bar {
+  text-align: center;                  /* centered text */
+  background-color: #2e2e2e;           /* different color than body */
+  color: white;
+  padding: 16px;                       /* padding */
+  margin: 8px 0;                       /* margin */
+  clear: both;
+}
+
+/* NAV: 3 items, horizontal, no bullets, hover */
+#main-nav {
+  background-color: crimson;
+  text-align: center;
+}
+#main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+#main-nav li {
+  display: inline-block;
+  list-style-type: none;               /* no bullets */
+  padding: 10px 16px;
+}
+#main-nav a {
+  text-decoration: none;
+  color: white;
+}
+#main-nav li:hover,
+#main-nav a:hover {
+  background-color: #7c7c7c;           /* hover state */
+  color: white;
+}
+
+/* Layout row wrapper + clearfix */
+.main-container {
+  border: 2px solid black;
+  width: 100%;
+  margin-bottom: 8px;
+}
+.main-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Main content: percentage width + margin + padding */
+.content-area {
+  width: 70%;                          /* % width */
+  float: left;
+  background: white;
+  margin: 8px;                         /* margin */
+  padding: 12px;                        /* padding */
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* Sidebar: percentage width + different color + margin + padding + hover */
+#sidebar {
+  width: 25%;                          /* % width */
+  float: right;
+  background-color: #d7ffd9;           /* different color from body/main */
+  margin: 8px;                         /* margin */
+  padding: 12px;                        /* padding */
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+#sidebar:hover {
+  background-color: #b9ffbf;           /* hover background change */
+}
+
+/* Content boxes in main */
+.content-box {
+  background-color: aliceblue;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/* FORM in main: required name + select + focus-grow textbox */
+.rps-form .form-row {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.rps-form label {
+  min-width: 70px;
+}
+
+.rps-form input[type="text"] {
+  width: 60%;
+  max-width: 420px;
+  padding: 6px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  transition: width 0.25s ease;        /* smooth grow/shrink */
+}
+.rps-form input[type="text"]:focus {
+  outline: none;
+  width: 85%;                          /* grows on focus; shrinks on blur */
+}
+
+.rps-form select {
+  padding: 6px;
+  border: 1px solid #333;
+  border-radius: 6px;
+}
+
+.rps-form button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: crimson;
+  color: white;
+  cursor: pointer;
+}
+.rps-form button:hover {
+  background: #7c1a1a;
+}
